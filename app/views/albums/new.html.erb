@@ -1,0 +1,35 @@
+<div class='album-form'>
+  <h1>新規アルバム</h1>
+  <%=form_with model: @album, local: true do |f|%>
+    <div class='album-form__field'>
+      <div class='album-form__field--left'>
+        <%= f.label :name, :チャットルーム名, class: 'album-form__label'%>
+      </div>
+      <div class='album-form__field--right'>
+        <%= f.text_field :name, class: 'album_name album-form__input', placeholder: 'アルバム名を入力してください'%>
+      </div>
+    </div>
+    <div class='album-form__field'>
+    </div>
+    <div class='album-form__field'>
+      <div class='album-form__field--left'>
+        <label class='album-form__label' for='album_共有メンバー'>共有メンバー</label>
+      </div>
+      <div class='album-form__field--right'>
+        <select name="album[user_ids][]">
+          <option value="">共有するユーザーを選択してください</option>
+          <% User.where.not(id: current_user.id).each do |user|%>
+            <option value=<%= user.id %>><%= user.name %></option>
+          <% end %>
+        </select>
+        <input name="album[user_ids][]" type="hidden" value=<%= current_user.id %>>
+      </div>
+    </div>
+    <div class='album-form__field'>
+      <div class='album-form__field--left'></div>
+      <div class='album-form__field--right'>
+        <%= f.submit class: 'album-form__action-btn'%>
+      </div>
+    </div>
+  <% end %>
+</div>
