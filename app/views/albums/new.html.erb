@@ -3,7 +3,7 @@
   <%=form_with model: @album, local: true do |f|%>
     <div class='album-form__field'>
       <div class='album-form__field--left'>
-        <%= f.label :name, :チャットルーム名, class: 'album-form__label'%>
+        <%= f.label :name, :アルバム名, class: 'album-form__label'%>
       </div>
       <div class='album-form__field--right'>
         <%= f.text_field :name, class: 'album_name album-form__input', placeholder: 'アルバム名を入力してください'%>
