@@ -1,0 +1,86 @@
+// Place all the styles related to the homes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// トップ画面
+
+.main-container{
+  background-color: bisque;
+  height: 100vh;
+  background-image: image-url('top.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+}
+
+.right-content{
+  width: 50vw;
+  position: relative;
+}
+
+.right-content p {
+  position: absolute;
+  top: 30%;
+  left: 47%;
+  color: white; 
+  font-weight: bold;
+  font-size: 50px;
+  font-family: fantasy;
+  
+}
+
+.left-content{
+   width: 50vw;
+   position: relative;
+}
+
+.left-content .sign-up {
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  color: white; 
+  font-weight: bold;
+  font-size: 50px;
+  font-family: fantasy;
+}
+
+.sign-up { 
+  text-decoration: none;
+}
+.left-content .log{
+  position: absolute;
+  top: 63%;
+  left: 20%;
+  color: white; 
+  font-weight: bold;
+  font-size: 50px;
+  font-family: fantasy;
+}
+
+.log {
+  text-decoration: none;
+}
+
+.left-content .user-nickname {
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  color: white; 
+  font-weight: bold;
+  font-size: 50px;
+}
+.user-nickname{
+  text-decoration: none;
+}
+
+.left-content .logout {
+  position: absolute;
+  top: 60%;
+  left: 20%;
+  color: white; 
+  font-weight: bold;
+  font-size: 50px;
+  font-family: fantasy;
+}
+.logout{
+  text-decoration: none;
+}
