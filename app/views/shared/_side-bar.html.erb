@@ -1,6 +1,6 @@
 <div class="side-bar-header">
   <div class="header-name">
-    <a href="#">Tom</a>
+    <a href="#"><%= current_user.nickname%></a>
   </div>
   <div class="create-album">
     <%= link_to 'アルバムを作成する', new_album_path %>
