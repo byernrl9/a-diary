@@ -8,10 +8,10 @@
 </div>
 
 <div class="albums">
-  <% current_user.albums.each do |a| %>
+  <% current_user.albums.each do |album| %>
     <div class="album">
       <div class="album-name">
-        <%= link_to a.name, album_diaries_path(a) %>
+        <%= link_to album.name, album_diaries_path(album) %>
       </div>
     </div>
   <% end %>

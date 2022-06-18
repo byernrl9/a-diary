@@ -1,0 +1,39 @@
+<%= form_with model: [@album, @diary], url: album_diaries_path(@album.id), local: true do |f| %>
+
+  <div class="time">
+    <%= f.label :start_time %>
+    <%= f.datetime_select :start_time %>
+  </div>
+
+  <div class="weather">
+    <%= f.label :weather_id %>
+    <%= f.collection_select(:weather_id, Weather.all, :id, :name,{})%>
+  </div>
+
+  <div class="image">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="title">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="content">
+    <%= f.label :content %>
+    <%= f.text_field :content %>
+  </div>
+
+  <div class="place">
+    <%= f.label :place %>
+    <%= f.text_field :place %>
+  </div>
+  
+   <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
+
+  <div class="submit">
+    <%= f.submit "keep this memory" %>
+  </div>
+
+<% end %>
