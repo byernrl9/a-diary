@@ -10,25 +10,27 @@
 - has_many :diaries 
 - has_many :calendars
 
-<!-- calendars table -->
+<!-- albums table -->
 
 | column             | type        | option                          |
 |--------------------|-------------|---------------------------------|
 | name               | string      | null: false                     |
 | user               |references   |null: false, foreign_key: true   |
-| diary              |references   |null: false, foreign_key: true   |
+
 
 has_many :diaries
 belongs_to :user
 
 <!-- diaries table -->
 
-| column    | type   | option      |
-|-----------|--------|-------------|
-| title     | string | null: false |
-| content   | text   | null: false |
-| place     | string | null: false | 
-|weather_id |integer | null: false |
+| column      | type        | option                          |
+|-------------|-------------|---------------------------------|
+| title       | string      | null: false                     |
+| content     | text        | null: false                     |
+| place       | string      | null: false                     | 
+|weather_id   |integer      | null: false                     |
+| user        |references   | null: false, foreign_key: true  |
+| album       |references   | null: false, foreign_key: true  |
 
 belongs_to :user
 belongs_to :calendar
