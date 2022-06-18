@@ -4,10 +4,10 @@ class CreateDiaries < ActiveRecord::Migration[6.0]
       t.string :title,        null: false
       t.text   :content,      null: false
       t.string :place,        null: false
-      t.integer :weather,     null: false
+      t.integer :weather_id,  null: false
       t.datetime :start_time, null: false
-      t.references :user,     null: false, foreign_key
-      t.references :album,    null: false, foreign_key
+      t.references :user,     null: false, foreign_key: true
+      t.references :album,    null: false, foreign_key: true
       t.timestamps
     end
   end

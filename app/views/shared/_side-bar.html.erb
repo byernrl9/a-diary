@@ -11,7 +11,7 @@
   <% current_user.albums.each do |a| %>
     <div class="album">
       <div class="album-name">
-        <a href="#"><%= a.name %></a>
+        <%= link_to a.name, album_diaries_path(a) %>
       </div>
     </div>
   <% end %>
