@@ -12,6 +12,9 @@
 </div>
 
 <div class="album-content">
+  <%= month_calendar events: @diaries do |date, diary| %>
+    <%= date.day %>
+  <% end %>
 </div>
 
 <div class="diary">

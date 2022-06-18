@@ -1,5 +1,5 @@
 class DiariesController < ApplicationController 
   def index
-    @diary = Diary.all
+    @diaries = Diary.all
   end
 end
