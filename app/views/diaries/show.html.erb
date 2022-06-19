@@ -1,0 +1,42 @@
+<div class="contents-row">
+  <div class="container">   
+     <div class="time-show">
+        <div class="time-name">日時</div><br />
+        <%= @diary.start_time %>
+     </div>
+
+      <div class="weather-show">
+        <div class="weather-name">天気</div><br />
+          <%= @diary.weather.name %>
+      </div>
+      
+
+      <div class="image-show">
+        <div class="iamge-name">画像</div><br />
+          <%= image_tag @diary.image.variant(resize: '400x400'), class: "image" if @diary.image.attached?%>
+      </div>
+      
+
+      <div class="title-show">
+        <div class="title-name">タイトル</div><br />
+        <%= @diary.title %>
+      </div>
+
+      <div class="content-show">
+        <div class="content-name">出来事</div><br />
+        <%= @diary.content %>
+      </div>
+
+      <div class="place-show">
+        <div class="place-name">場所</div><br />
+        <%= @diary.place %>
+      </div>
+  </div>
+</div>
+
+      <%# <% if user_signed_in? %> %>
+          <%# <% if current_user[:id] == @diary.user[:id]%> %>
+            <%# <%= link_to "編集", edit_diary_path(@diary.id), method: :get, class: "diary-edit-btn" %> %> %>
+            <%# <%= link_to "削除", diary_path(@diary.id), method: :delete, class:"diary-destroy" %> %>
+          <%# <% end %> %>
+      <%# <% end%> %>
