@@ -2,6 +2,7 @@ class DiariesController < ApplicationController
   def index
     @album = Album.find(params[:album_id])
     @diaries = @album.diaries.includes(:user)
+    
   end
 
   def new
@@ -21,6 +22,7 @@ class DiariesController < ApplicationController
   end
 
   def show
+    @diary = Diary.find(params[:id])
   end
 
   private 
