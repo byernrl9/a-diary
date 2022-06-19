@@ -1,6 +1,7 @@
 class DiariesController < ApplicationController 
   def index
-    @diaries = Diary.all
+    @album = Album.find(params[:album_id])
+    @diaries = @album.diaries.includes(:user)
   end
 
   def new
@@ -11,7 +12,6 @@ class DiariesController < ApplicationController
   def create
     @lbum = Album.find(params[:album_id])
     @diary = Diary.new(diary_params)
-    binding.pry
     if @diary.save 
      
       redirect_to album_diaries_path

@@ -14,22 +14,12 @@
 <div class="album-content">
   <%= month_calendar events: @diaries do |date, diaries| %>
     <%= date.day %>
-     <% diaries.each do |diary|%>
-        <div class="diary-img">
-          <%# <%= link_to diary_path(diary.id) do %>
-            <%=  image_tag diary.image.variant(resize: '100x100'), class: "image" if diary.image.attached? %> 
-          <%# <% end %> 
-        </div>
-
-        <div class="diary-title">
-          <%= diary.title %>
-        </div>
-      <% end %>
-  <% end %>
+     <%= render partial: 'shared/diary', collection: diaries %>
+   <% end %>
 </div>
 
 <div class="diary">
-  <div class="new-diary">
+  <div class="new-diary"> 
     <%= link_to "Make memory", new_album_diary_path %>
   </div>
 </div>
