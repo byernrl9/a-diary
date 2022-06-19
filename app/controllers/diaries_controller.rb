@@ -11,7 +11,7 @@ class DiariesController < ApplicationController
   end
 
   def create
-    @lbum = Album.find(params[:album_id])
+    @album = Album.find(params[:album_id])
     @diary = Diary.new(diary_params)
     if @diary.save 
      
@@ -24,6 +24,21 @@ class DiariesController < ApplicationController
   def show
     @diary = Diary.find(params[:id])
   end
+
+  def edit
+    @diary = Diary.find(params[:id])
+  end
+
+  def update
+    @album = Album.find(params[:album_id])
+    @diary = Diary.find(params[:id])
+    if @diary.update(diary_params)
+      redirect_to  album_diaries_path(@album)
+    else
+      render :edit
+    end
+  end
+
 
   private 
   
