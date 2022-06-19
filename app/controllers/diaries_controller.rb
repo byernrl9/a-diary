@@ -39,6 +39,13 @@ class DiariesController < ApplicationController
     end
   end
 
+  def destroy
+    @album = Album.find(params[:album_id])
+    @diary = Diary.find(params[:id])
+    @diary.destroy
+    redirect_to album_diaries_path(@album)
+  end
+
 
   private 
   
