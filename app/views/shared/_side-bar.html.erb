@@ -1,6 +1,6 @@
 <div class="side-bar-header">
   <div class="header-name">
-    <a href="#">Tom</a>
+    <a href="#"><%= current_user.nickname%></a>
   </div>
   <div class="create-album">
     <%= link_to 'アルバムを作成する', new_album_path %>
@@ -8,10 +8,10 @@
 </div>
 
 <div class="albums">
-  <% current_user.albums.each do |a| %>
+  <% current_user.albums.each do |album| %>
     <div class="album">
       <div class="album-name">
-        <a href="#"><%= a.name %></a>
+        <%= link_to album.name, album_diaries_path(album) %>
       </div>
     </div>
   <% end %>

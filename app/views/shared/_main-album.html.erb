@@ -6,16 +6,20 @@
   </div>
   <div class="right-header">
     <div class="header-button">
-      <a href="#">アルバムを閉じる</a>
+     <%= link_to 'アルバムを閉じる', albums_path(@album) %>
     </div>
   </div>
 </div>
 
 <div class="album-content">
+  <%= month_calendar events: @diaries do |date, diaries| %>
+    <%= date.day %>
+     <%= render partial: 'shared/diary', collection: diaries %>
+   <% end %>
 </div>
 
 <div class="diary">
-  <div class="new-diary">
-    <%= link_to "Make memory" %>
+  <div class="new-diary"> 
+    <%= link_to "Make memory", new_album_diary_path %>
   </div>
 </div>

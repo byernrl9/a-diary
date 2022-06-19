@@ -1,0 +1,11 @@
+
+    <div class="diary-img">
+       <%# <%= link_to diary_path(diary.id) do %>
+         <%=  image_tag diary.image.variant(resize: '100x100'), class: "image" if diary.image.attached? %> 
+       <%# <% end %> 
+     </div>
+  <div class="diary-title">
+    <%= diary.title %>
+  </div>
+
+ 
