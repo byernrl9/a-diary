@@ -2,6 +2,9 @@
 <div class="contents-row">
   <div class="container">
     <%= form_with model: [@album, @diary], url: album_diaries_path(@album.id), local: true do |f| %>
+     <%= render 'shared/error_messages', model: f.object %>
+
+    <%= render 'shared/error_messages', model: f.object %>
 
       <div class="time">
         <%= f.label :"日時" %><br />
