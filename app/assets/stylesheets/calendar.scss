@@ -1,0 +1,47 @@
+.simple-calendar {
+  .calendar-heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .calendar-heading a{
+    color: rgb(246, 161, 50);
+  }
+
+  .calendar-title{
+    font-size: 30px;
+    margin: 0 20px;
+  }
+
+  .thead{
+    
+  }
+
+
+  .day {
+  }
+
+  .wday-0 {
+    color: rgb(202, 75, 29);
+  }
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {}
+  .wday-6 {
+    color:rgba(53, 165, 230, 0.741);
+  }
+
+  .today {}
+  .past {}
+  .future {}
+
+  .start-date {}
+
+  .prev-month {}
+  .next-month { }
+  .current-month {}
+
+  .has-events {}
+}
