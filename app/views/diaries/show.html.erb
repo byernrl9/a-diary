@@ -1,3 +1,4 @@
+<%= render partial: "shared/header"%>
 <div class="contents-row">
   <div class="container">   
      <div class="time-show">
@@ -5,10 +6,10 @@
         <%= @diary.start_time %>
      </div>
 
-      <div class="weather-show">
+     <div class="weather-show">
         <div class="weather-name">天気</div><br />
           <%= @diary.weather.name %>
-      </div>
+     </div>
       
 
       <div class="image-show">
@@ -31,16 +32,23 @@
         <div class="place-name">場所</div><br />
         <%= @diary.place %>
       </div>
-  </div>
-
-  <% if user_signed_in? %>
-   <div class="under-contet">
-    <% if current_user[:id] == @diary.user[:id]%>
-      <%= link_to "編集", edit_album_diary_path, method: :get, class: "diary-edit-btn" %>
-      <%= link_to "削除", album_diary_path, method: :delete, class:"diary-destroy" %> 
-    <% end %>
-  </div>
-   <% end%>
+      <% if user_signed_in? %>
+          <div class="under-contets">
+            <% if current_user[:id] == @diary.user[:id]%>
+              <div class="edit-under-content">
+                <%= link_to "編集", edit_album_diary_path, method: :get, class: "diary-edit-btn" %>
+              </div>
+              <div class="destroy-under-content">
+                <%= link_to "削除", album_diary_path, method: :delete, class:"diary-destroy" %> 
+              </div>
+            <% end %>
+          </div>
+      <% end%>
+  </div>  
 </div>
+
+ 
+
+<%= render partial: "shared/footer" %>
 
      

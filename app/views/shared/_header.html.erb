@@ -1,0 +1,8 @@
+ <header class="header">
+      <div class="header__bar row">
+        <%= link_to "A-Diary", root_path%>
+      </div>
+      <div class="header-user-name">
+        <%= link_to current_user.nickname, albums_path %>
+      </div>
+ </header>
