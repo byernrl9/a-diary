@@ -1,26 +1,24 @@
 <%= render partial: "shared/header"%>
 
 <div class='album-form'>
-  <h5>新規アルバム</h5>
+  <h5>new Album</h5>
+   
   <%=form_with model: @album, local: true do |f|%>
+
+  <%= render 'shared/error_messages', model: f.object %>
+
     <div class='album-form__field'>
       <div class='album-form__field--left'>
-        <%= f.label :name, :アルバム名, class: 'album-form__label'%>
-      </div>
-      <div class='album-form__field--right'>
+        <%= f.label :name, :アルバム名, class: 'album-form__label'%><br />
         <%= f.text_field :name, class: 'album_name album-form__input', placeholder: 'アルバム名を入力してください'%>
         <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
       </div>
     </div>
-    <div class='album-form__field'>
-    </div>
-  
-    <div class='album-form__field'>
-      <div class='album-form__field--left'></div>
+
       <div class='album-form__field--right'>
         <%= f.submit class: 'album-form__action-btn'%>
       </div>
-    </div>
+   
   <% end %>
 </div>
 

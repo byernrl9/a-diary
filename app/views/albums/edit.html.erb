@@ -1,6 +1,7 @@
 <%= render partial: "shared/header"%>
 <div class='album-form'>
   <%=form_with(model: @album, url: album_path, method: :patch, local: true) do |f|%>
+   <%= render 'shared/error_messages', model: f.object %>
 
     <div class='album-form__field'>
       <div class='album-form__field--left'>
