@@ -5,6 +5,7 @@
     </div>
     <div class="album-edit">
       <%= link_to "編集", edit_album_path(@album.id) %>
+      <%= link_to "削除", album_path(@album.id), method: :delete %>
     </div>
   </div>
   <div class="right-header">
