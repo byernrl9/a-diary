@@ -3,6 +3,9 @@
     <div class="header-title">
       <%= @album.name %>
     </div>
+    <div class="album-edit">
+      <%= link_to "編集", edit_album_path(@album.id) %>
+    </div>
   </div>
   <div class="right-header">
     <div class="header-button">

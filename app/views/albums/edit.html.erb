@@ -1,0 +1,23 @@
+<div class='album-form'>
+  <%=form_with(model: @album, url: album_path, method: :patch, local: true) do |f|%>
+
+    <div class='album-form__field'>
+      <div class='album-form__field--left'>
+        <%= f.label :name, :アルバム名, class: 'album-form__label'%>
+      </div>
+      <div class='album-form__field--right'>
+        <%= f.text_field :name, class: 'album_name album-form__input', placeholder: 'アルバム名を入力してください'%>
+        <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
+      </div>
+    </div>
+    <div class='album-form__field'>
+    </div>
+  
+    <div class='album-form__field'>
+      <div class='album-form__field--left'></div>
+      <div class='album-form__field--right'>
+        <%= f.submit class: 'album-form__action-btn'%>
+      </div>
+    </div>
+  <% end %>
+</div>
