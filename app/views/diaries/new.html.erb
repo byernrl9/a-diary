@@ -1,3 +1,4 @@
+<%= render partial: "shared/header"%>
 <div class="contents-row">
   <div class="container">
     <%= form_with model: [@album, @diary], url: album_diaries_path(@album.id), local: true do |f| %>
@@ -40,3 +41,5 @@
     <% end %>
   </div>
 </div>
+
+<%= render partial: "shared/footer" %>

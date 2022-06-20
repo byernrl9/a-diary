@@ -1,5 +1,7 @@
+<%= render partial: "shared/header"%>
+
 <div class='album-form'>
-  <h1>新規アルバム</h1>
+  <h5>新規アルバム</h5>
   <%=form_with model: @album, local: true do |f|%>
     <div class='album-form__field'>
       <div class='album-form__field--left'>
@@ -21,3 +23,5 @@
     </div>
   <% end %>
 </div>
+
+<%= render partial: "shared/footer" %>
