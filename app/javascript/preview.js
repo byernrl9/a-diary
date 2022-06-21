@@ -16,5 +16,10 @@ document.addEventListener('DOMContentLoaded', function(){
     const file = e.target.files[0];
     const blob = window.URL.createObjectURL(file);
     console.log(blob);
+    const previewWrapper = document.createElement('div');
+    previewWrapper.setAttribute('class', 'preview');
+    // 表示する画像を生成
+    const previewImage = document.createElement('img');
+    previewImage.setAttribute('class', 'preview-image');
   });
 });
