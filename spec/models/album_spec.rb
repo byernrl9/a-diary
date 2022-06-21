@@ -14,12 +14,12 @@ RSpec.describe Album, type: :model do
       it "アルバム名が空だと保存できない" do
         @album.name = ""
         @album.valid?
-        expect(@album.errors.full_messages).to include("Name can't be blank")
+        expect(@album.errors.full_messages).to include("アルバム名を入力してください")
       end
       it "ユーザーが紐づいていないと保存できない" do
         @album.user = nil
         @album.valid?
-        expect(@album.errors.full_messages).to include("User must exist")
+        expect(@album.errors.full_messages).to include("Userを入力してください")
       end
     end
   end
