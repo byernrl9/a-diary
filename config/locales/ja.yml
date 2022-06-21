@@ -1,0 +1,13 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+      album:
+        name: アルバム名
+      diary:
+        title: タイトル
+        image: 画像
+        content: 出来事
+        weather_id: 天気
+        start_time: 日時
