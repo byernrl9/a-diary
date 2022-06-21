@@ -2,7 +2,7 @@
 <div class="contents-row">
   <div class="container">    
     
-    <%= form_with(model: @diary, url: album_diary_path, method: :patch,local: true) do |f| %>
+    <%= form_with(model: @diary, url: album_diary_path, method: :patch,id: 'new_diary',local: true) do |f| %>
      <%= render 'shared/error_messages', model: f.object %>
 
       <div class="time">
@@ -15,6 +15,8 @@
         <%= f.collection_select(:weather_id, Weather.all, :id, :name,{})%>
       </div>
 
+      <div id="previews"></div>
+      
       <div class="image">
         <%= f.label :"画像" %><br />
         <%= f.file_field :image %>
