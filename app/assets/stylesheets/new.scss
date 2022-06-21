@@ -1,12 +1,5 @@
 // album作成時のnew.html.erb
 
-h5 {
-  letter-spacing: 2px;
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-}
-
 h2 {
   margin-bottom: 10px;
   color: #f05050;
@@ -43,48 +36,35 @@ li {
   border-radius: 2px;
   text-align: center;
 }
-.album-form__label {
-  display: block;
-  line-height: 50px;
-  font-weight: bold;
-  text-align: center;
-}
-.album-form__input {
-  float: left;
+
+.album-new{
   width: 100%;
-  line-height: 30px;
-  padding: 10px 15px;
-  box-sizing: border-box;
-  
-}
-.album-form__action-btn {
-  display: inline-block;
-  padding: 12px 20px;
-  margin-left: 100px;
-  color: #fff;
-  background-color: #38aef0;
-  border: 0;
-}
-.album-form__field {
-  margin-top: 50px;
+  height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
+.album-title{
+  font-size: 50px;
+  margin-bottom:30px ;
 }
-.album-form__field:after {
-  content: "";
-  clear: both;
-  display: block;
+.album-form__field{
+  text-align: center;
+  margin-bottom: 30px;
 }
-.album-form__field--left {
-  float: left;
-  width: 30%;
-  padding-right: 20px;
-  padding-left: 20px;
-  box-sizing: border-box;
+
+.album-form__label{
+  font-size: 20px;
 }
-.album-form__field--right {
-  margin-top: 70px;
-  float: right;
-  width: 70%;
+
+.album-form__field-btn{
+  text-align: center;
+  
 }
+
+.album-form___action-btn{
+  
+}
+

@@ -1,26 +1,26 @@
 <%= render partial: "shared/header"%>
 
 <div class='album-form'>
-  
-  <div class="album-new">new Album</div>
-   
-  <%=form_with model: @album, local: true do |f|%>
+  <div class="album-new">
+    <div class="album-title">new Album</div>
+    <%=form_with model: @album, local: true do |f|%>
 
-  <%= render 'shared/error_messages', model: f.object %>
+    <%= render 'shared/error_messages', model: f.object %>
 
-    <div class='album-form__field'>
-      <div class='album-form__field--left'>
-        <%= f.label :name, :アルバム名, class: 'album-form__label'%><br />
-        <%= f.text_field :name, class: 'album_name album-form__input', placeholder: 'アルバム名を入力してください'%>
-        <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
+      <div class='album-form__field'>
+        <div class='album-form__field--left'>
+          <%= f.label :name, :アルバム名, class: 'album-form__label'%><br />
+          <%= f.text_field :name, class: 'album_name album-form__input', placeholder: 'アルバム名を入力してください'%>
+          <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
+        </div>
       </div>
-    </div>
 
-      <div class='album-form__field--right'>
-        <%= f.submit class: 'album-form__action-btn'%>
-      </div>
-   
-  <% end %>
+        <div class='album-form__field-btn'>
+          <%= f.submit "作成する", class: 'album-form__action-btn'%>
+        </div>
+    
+    <% end %>
+  </div>
 </div>
 
 <%= render partial: "shared/footer" %>
