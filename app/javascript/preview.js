@@ -21,5 +21,6 @@ document.addEventListener('DOMContentLoaded', function(){
     // 表示する画像を生成
     const previewImage = document.createElement('img');
     previewImage.setAttribute('class', 'preview-image');
+    previewImage.setAttribute('src', blob);
   });
 });
