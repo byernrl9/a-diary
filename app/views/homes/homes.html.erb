@@ -1,7 +1,14 @@
-<div class="main-container">
-  <div class="right-content">
-    <p><%= link_to "A-Diary", albums_path %></p>
-  </div>
+<div class="main-container">  
+  <% if user_signed_in? %>
+    <div class="right-content">
+      <p><%= link_to "A-Diary", albums_path %></p>
+    </div>
+  <% else %> 
+    <div class="right-content">
+      <p>A-Diary</p>
+    </div>
+  <% end%> 
+
   <div class="left-content">
   
    <% if user_signed_in? %>
@@ -18,7 +25,6 @@
      <div class="user-log">
       <%= link_to 'Log in', new_user_session_path, class: "log" %> 
      </div>
-    
    <% end%> 
   </div>
 </div>
