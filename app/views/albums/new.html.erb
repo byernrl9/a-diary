@@ -8,11 +8,20 @@
     <%= render 'shared/error_messages', model: f.object %>
 
       <div class='album-form__field'>
+
         <div class='album-form__field--left'>
-          <%= f.label :name, :アルバム名, class: 'album-form__label'%><br />
-          <%= f.text_field :name, class: 'album_name album-form__input', placeholder: 'アルバム名を入力してください'%>
-          <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
+
+          <div class="album-form__label">
+            <%= f.label :name, :アルバム名, class:'album-label'%><br />
+          </div>
+
+          <div class="album-form_name">
+            <%= f.text_field :name, class:'album-input', placeholder: 'アルバム名を入力してください'%>
+            <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
+          </div>
+          
         </div>
+
       </div>
 
         <div class='album-form__field-btn'>
