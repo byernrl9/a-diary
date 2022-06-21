@@ -1,4 +1,5 @@
 class DiariesController < ApplicationController
+  before_action :authenticate_user!
   def index
     @album = Album.find(params[:album_id])
     @diaries = @album.diaries.includes(:user)
