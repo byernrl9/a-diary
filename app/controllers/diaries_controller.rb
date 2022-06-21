@@ -1,8 +1,7 @@
-class DiariesController < ApplicationController 
+class DiariesController < ApplicationController
   def index
     @album = Album.find(params[:album_id])
     @diaries = @album.diaries.includes(:user)
-    
   end
 
   def new
@@ -13,8 +12,8 @@ class DiariesController < ApplicationController
   def create
     @album = Album.find(params[:album_id])
     @diary = Diary.new(diary_params)
-    if @diary.save 
-     
+    if @diary.save
+
       redirect_to album_diaries_path
     else
       render :new
@@ -33,7 +32,7 @@ class DiariesController < ApplicationController
     @album = Album.find(params[:album_id])
     @diary = Diary.find(params[:id])
     if @diary.update(diary_params)
-      redirect_to  album_diaries_path(@album)
+      redirect_to album_diaries_path(@album)
     else
       render :edit
     end
@@ -46,11 +45,10 @@ class DiariesController < ApplicationController
     redirect_to album_diaries_path(@album)
   end
 
+  private
 
-  private 
-  
   def diary_params
-    params.require(:diary).permit(:start_time, :weather_id, :image, :title,:content, :place).merge(user_id: current_user.id, album_id: params[:album_id] )
+    params.require(:diary).permit(:start_time, :weather_id, :image, :title, :content, :place).merge(user_id: current_user.id,
+                                                                                                    album_id: params[:album_id])
   end
-
 end
