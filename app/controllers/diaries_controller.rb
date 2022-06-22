@@ -46,6 +46,11 @@ class DiariesController < ApplicationController
     redirect_to album_diaries_path(@album)
   end
 
+  def search
+    @album = Album.find(params[:album_id])
+    @diaries = Diary.search(params[:keyword])
+  end
+
   private
 
   def diary_params
