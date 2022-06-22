@@ -10,4 +10,12 @@ class Diary < ApplicationRecord
   has_one_attached :image
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :weather
+
+  def self.search(search)
+    if search != ""
+      Diary.where('place LIKE(?)' or 'title LIKE(?)', "%#{search}%")
+    else
+      Diary.all
+    end
+  end
 end
