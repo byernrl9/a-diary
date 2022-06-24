@@ -12,9 +12,12 @@ https://a--diary.herokuapp.com/
 
 # テスト用アカウント
 
-・Basic認証パスワード:4869
-・Basic認証ID:byernrl9
-・メールアドレス:test@test1 
+・Basic認証パスワード:4869  
+
+・Basic認証ID:byernrl9  
+
+・メールアドレス:test@test1  
+ 
 ・パスワード:test1111
 
 # 利用方法
