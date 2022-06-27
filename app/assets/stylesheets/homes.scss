@@ -1,8 +1,9 @@
 // Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-// トップ画面
 
+// トップ画面
+// 全体
 .main-container{
   background-color: bisque;
   height: 100vh;
@@ -11,13 +12,16 @@
   background-position: center;
   display: flex;
 }
+/////////////////////////////////////////////////////////////////////
 
-.right-content{
+// 画面左半分
+
+.left-content{
   width: 50vw;
   position: relative;
 }
 
-.right-content p {
+.left-content p {
   position: absolute;
   top: 30%;
   left: 47%;
@@ -27,16 +31,25 @@
   font-family: fantasy;
   
 }
-p a{
+.left-content > p{
   color: white;
+  transition: color .3s;
 }
 
-.left-content{
+.left-content > p:hover {
+  color: rgb(156, 213, 236);
+}
+
+//////////////////////////////////////////////////////////////////////////
+
+
+// 画面右半分
+.right-content{
    width: 50vw;
    position: relative;
 }
 
-.left-content .sign-up {
+.right-content .sign-up {
   position: absolute;
   top: 45%;
   left: 20%;
@@ -46,10 +59,18 @@ p a{
   font-family: fantasy;
 }
 
-.sign-up { 
+.sign-up  { 
   text-decoration: none;
+  transition: color .3s;
 }
-.left-content .log{
+
+.sign-up:hover {
+  color: rgb(156, 213, 236);
+}
+
+
+
+.right-content .log{
   position: absolute;
   top: 63%;
   left: 20%;
@@ -59,11 +80,18 @@ p a{
   font-family: fantasy;
 }
 
-.log {
+.log { 
   text-decoration: none;
+  transition: color .3s;
 }
 
-.left-content .user-nickname {
+.log:hover {
+  color: rgb(156, 213, 236);
+}
+
+
+
+.right-content .user-nickname {
   position: absolute;
   top: 45%;
   left: 20%;
@@ -75,7 +103,7 @@ p a{
   text-decoration: none;
 }
 
-.left-content .logout {
+.right-content .logout {
   position: absolute;
   top: 60%;
   left: 20%;
@@ -84,6 +112,11 @@ p a{
   font-size: 50px;
   font-family: fantasy;
 }
-.logout{
+.log{
   text-decoration: none;
+  transition: color .3s;
+}
+
+.log:hover {
+  color: rgb(156, 213, 236);
 }

@@ -1,15 +1,15 @@
 <div class="main-container">  
   <% if user_signed_in? %>
-    <div class="right-content">
+    <div class="left-content">
       <p><%= link_to "A-Diary", albums_path %></p>
     </div>
   <% else %> 
-    <div class="right-content">
+    <div class="left-content">
       <p>A-Diary</p>
     </div>
   <% end%> 
 
-  <div class="left-content">
+  <div class="right-content">
   
    <% if user_signed_in? %>
      <div class="user"> 
