@@ -4,119 +4,78 @@
 
 // トップ画面
 // 全体
-.main-container{
-  background-color: bisque;
-  height: 100vh;
-  background-image: image-url('top.jpeg');
+
+// header
+
+body {
+  background-image: image-url('bgimg.jpg');
   background-repeat: no-repeat;
   background-position: center;
-  display: flex;
-}
-/////////////////////////////////////////////////////////////////////
-
-// 画面左半分
-
-.left-content{
-  width: 50vw;
-  position: relative;
-}
-
-.left-content p {
-  position: absolute;
-  top: 30%;
-  left: 47%;
-  color: white; 
-  font-weight: bold;
-  font-size: 50px;
-  font-family: fantasy;
+  object-fit: cover;
+  // opacity: 30%;
   
 }
-.left-content > p{
-  color: white;
+
+header {
+ margin: 0;
+ padding: 8px 0;
+ font-family: fantasy;
+ 
+}
+
+header .container {
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header li + li {
+  margin-left: 8px;
+}
+
+.container .home {
+  font-size: 40px;
+  color:rgba(246, 144, 11, 0.999);
   transition: color .3s;
 }
 
-.left-content > p:hover {
+.container .home:hover {
   color: rgb(156, 213, 236);
 }
 
-//////////////////////////////////////////////////////////////////////////
-
-
-// 画面右半分
-.right-content{
-   width: 50vw;
-   position: relative;
-}
-
-.right-content .sign-up {
-  position: absolute;
-  top: 45%;
-  left: 20%;
-  color: white; 
-  font-weight: bold;
-  font-size: 50px;
-  font-family: fantasy;
-}
-
-.sign-up  { 
-  text-decoration: none;
+li .sign-up,
+li .log {
+  font-size: 25px;
+  color:rgba(246, 144, 11, 0.999);
   transition: color .3s;
 }
 
-.sign-up:hover {
+li .sign-up:hover,
+li .log:hover {
   color: rgb(156, 213, 236);
 }
 
+// hero
+.hero {
+ 
+  height: 100vh;
+ 
+  position: relative;
+  
+ 
+}
 
-
-.right-content .log{
+section .container {
   position: absolute;
-  top: 63%;
-  left: 20%;
-  color: white; 
-  font-weight: bold;
-  font-size: 50px;
-  font-family: fantasy;
-}
 
-.log { 
-  text-decoration: none;
-  transition: color .3s;
-}
-
-.log:hover {
-  color: rgb(156, 213, 236);
 }
 
 
 
-.right-content .user-nickname {
-  position: absolute;
-  top: 45%;
-  left: 20%;
-  color: white; 
-  font-weight: bold;
-  font-size: 50px;
-}
-.user-nickname{
-  text-decoration: none;
-}
 
-.right-content .logout {
-  position: absolute;
-  top: 60%;
-  left: 20%;
-  color: white; 
-  font-weight: bold;
-  font-size: 50px;
-  font-family: fantasy;
-}
-.log{
-  text-decoration: none;
-  transition: color .3s;
-}
-
-.log:hover {
-  color: rgb(156, 213, 236);
-}
