@@ -1,30 +1,19 @@
-<div class="main-container">  
-  <% if user_signed_in? %>
-    <div class="left-content">
-      <p><%= link_to "A-Diary", albums_path %></p>
-    </div>
-  <% else %> 
-    <div class="left-content">
-      <p>A-Diary</p>
-    </div>
-  <% end%> 
-
-  <div class="right-content">
-  
-   <% if user_signed_in? %>
-     <div class="user"> 
-      <%= link_to current_user.nickname, "#", class: "sign-up" %> 
-     </div> 
-     <div class="user-log">
-      <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "log" %> 
-     </div>
-   <% else %> 
-     <div class="user">
-       <%= link_to 'Sing up', new_user_registration_path, class: "sign-up" %> 
-     </div>
-     <div class="user-log">
-      <%= link_to 'Log in', new_user_session_path, class: "log" %> 
-     </div>
-   <% end%> 
+<header>
+  <div class="container">
+    <%= link_to "A-Diary", albums_path, class: "home" %>
+    <nav>
+      <ul>
+        <li><%= link_to "Sing up", new_user_registration_path, class: "sign-up"%></li>
+        <li><%= link_to "Log in", new_user_session_path, class: "log" %></li>
+    </nav>
   </div>
-</div>
+</header>
+<section class="hero">
+  <div class="container">
+    <h1>カレンダー上に簡単に思い出を残せるアプリ</h1>
+    <p>どんな時でも<br>
+       思い出を<br>
+       すぐに思い出せる
+    </p>
+  </div>
+</section>
